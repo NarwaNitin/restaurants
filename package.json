@@ -1,0 +1,43 @@
+{
+  "name": "restaurants-ui",
+  "version": "1.0.0",
+  "description": "restaurants List with ratings and comments",
+  "main": "./server/index.js",
+  "scripts": {
+    "analyze": "npm run analyze --prefix client",
+    "start": "node index.js",
+    "server": "nodemon ./server/index.js | pino-pretty",
+    "debug": "`nodemon --inspect index.js` | pino-pretty",
+    "client": "npm run start --prefix client",
+    "test": "npm run test:ci --prefix client -- -u",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "lint": "npm run lint --prefix client"
+  },
+  "keywords": [
+    "restarunt",
+    "ratings",
+    "reviews",
+    "comments"
+  ],
+  "author": "Hema Chandra",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.20.0",
+    "compression": "^1.7.4",
+    "config": "^3.3.1",
+    "connect": "^3.7.0",
+    "csurf": "^1.11.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "host-validation": "^2.0.1",
+    "pino": "^6.5.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "10.1.0",
+    "concurrently": "5.2.0",
+    "husky": "1.3.1",
+    "lint-staged": "9.5.0",
+    "nodemon": "2.0.4",
+    "pino-pretty": "2.5.0"
+  }
+}
